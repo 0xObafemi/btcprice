@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>BTC Price Result</title>
+     <link rel="stylesheet" type="text/css" href="styles/main.css">
+</head>
+<body>
+    <main class="container">
+
+        <a href="/">← Back</a>
+
+        <h1>BTC Price Live</h1>
+
+        <% if (error) { %>
+            <p class="error"><%= error %></p>
+        <% } else { %>
+            <p>
+                <!-- <strong>Currency:</strong> <%= currency %><br> -->
+                <strong>Currency:</strong> <%= data.symbol %><br>
+                <strong>Last Price:</strong> <%= data.symbol %> <%= data.last %><br>
+                <strong>15m Price:</strong> <%= data.symbol %> <%= data["15m"] %><br>
+            </p>
+        <% } %>
+
+    </main>
+</body>
+</html>

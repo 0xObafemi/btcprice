@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coin price Checker</title>
+      <link rel="stylesheet" type="text/css" href="styles/main.css">
+</head>
+<body>
+    <div class = "header-box"> <img src="/images/Obafemi-ExchangeICON.jpg" class="logo" alt="logo"> <h2> Obafemi Exchange BTC Price Checker</h2> 
+    </div>
+        <h1>Check the current price of Bitcoin</h1>
+        <form action="/price" method="POST">
+            <label for="currency">Select a currency:</label>
+            <select name="currency" id="currency">
+                <% currencies.forEach(currency => { %>
+                    <option value="<%= currency %>"><%= currency %></option>
+                <% }) %>
+            </select>
+            <button type="submit">Check Price</button>
+        </form>
+    </main>
+</body>
+
+<footer>
+  <p>© 2025 0xObafemi. All rights reserved.</p>
+      <p>Built by <a href="http://github.com/0xobafemi">0xObafemi</a></p>
+      <h3>Powered by <a href="http://blockchain.info/ticker">Blockchain API</a></h3>
+</footer>
+</html>
+
